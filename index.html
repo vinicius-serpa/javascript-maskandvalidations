@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Formatacao de campos</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">	
+</head>
+<body>
+	<form name="form1">
+		<br><br>CEP:
+		<input type="text" maxlength="09" name="cep" onKeyPress="return mask(this, event, 'cep');" onBlur="" placeholder="digite ...">
+
+		<br><br>DATA:
+		<input type="text" maxlength="10" name="data" onKeyPress="return mask(this, event, 'data');" onBlur= "" placeholder="digite ...">
+		
+		<br><br>Telefone: 
+		<input type="text" maxlength="14" name="tel" onKeyPress="return mask(this, event, 'fone');" onBlur="" placeholder="digite ...">
+
+		<br><br>
+		<label for="cpf" id="">CPF</label><div id="cpfError"></div>
+		<input type="text" maxlength="14" id="cpf" name="cpf" onKeyPress="return mask(this, event, 'cpf');" onBlur="validate(this, 'cpf', 'cpfError', 'CPF incorreto!');" placeholder="digite ...">
+
+		<br><br>
+		<label for="cnpj" id="">CNPJ</label><div id="cnpjError"></div>
+		<input type="text" maxlength="18" id="cnpj" name="cnpj" onKeyPress="return mask(this, event, 'cnpj');" onBlur="validate(this, 'cnpj', 'cnpjError', 'CNPJ incorreto!');" placeholder="digite ...">
+	</form>
+	
+	<script language="JavaScript" type="text/javascript" src="mask.js"></script>
+	<script language="JavaScript" type="text/javascript" src="validation.js"></script> 
+</body>
+</html>
